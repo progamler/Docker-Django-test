@@ -14,8 +14,8 @@ from pathlib import Path
 import os
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 DEBUG = os.getenv('DEBUG', False) == 'true'
-ALLOWED_HOSTS = ['localhost', 'www.guerilla-it.de']
-CSRF_TRUSTED_ORIGINS = ['http://localhost', 'http://www.guerilla-it.de']
+ALLOWED_HOSTS = ['localhost', 'www.guerilla-it.de', '65.108.128.58']
+CSRF_TRUSTED_ORIGINS = ['http://localhost', 'http://www.guerilla-it.de', 'http://65.108.128.58:9000']
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
