@@ -25,7 +25,9 @@ services:
     depends_on:
       - db
       - redis
-    command: gunicorn appname.wsgi -c gunicorn.cfg.py
+    command: gunicorn appname.wsgi -c gunicorn.cfg.py --reload
+    environment:
+      - DEBUG=true
     volumes:
       - ./_app:/usr/src/app
     networks:
