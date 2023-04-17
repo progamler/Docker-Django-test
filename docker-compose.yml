@@ -25,11 +25,11 @@ services:
     depends_on:
       - db
       - redis
-    command: pwd; cd /usr/src/app; ls -al
-    environment:
-      - DEBUG=true
     volumes:
       - ./_app:/usr/src/app
+    command: ls -al
+    environment:
+      - DEBUG=true
     networks:
       - database_network
       - redis_network
