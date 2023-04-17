@@ -25,7 +25,7 @@ services:
     depends_on:
       - db
       - redis
-    command: ls -al
+    command: (cd /usr/src/app & ls -al)
     environment:
       - DEBUG=true
     volumes:
