@@ -25,7 +25,7 @@ services:
     depends_on:
       - db
       - redis
-    command: gunicorn /usr/src/app/appname.wsgi -c /usr/src/app/gunicorn.cfg.py --reload
+    command: gunicorn appname.wsgi --reload
     environment:
       - DEBUG=true
     volumes:
